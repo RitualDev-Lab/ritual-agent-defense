@@ -1,0 +1,10 @@
+.vscode/**
+.github/**
+src/**
+tsconfig.json
+.vscodeignore
+.gitignore
+*.log
+*.vsix
+tests/**
+dist-test/**

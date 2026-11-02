@@ -1,0 +1,177 @@
+{
+  "name": "ritual-agent-defense",
+  "displayName": "Ritual Agent Defense",
+  "description": "Unified AI Agent Runtime Defense, Kernel Sandboxing, Database Guardrails & Context Optimizer for Cursor, VS Code, and Windsurf",
+  "version": "0.1.0",
+  "publisher": "ritualdev-lab",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RitualDev-Lab/ritual-agent-defense"
+  },
+  "homepage": "https://github.com/RitualDev-Lab/ritual-agent-defense#readme",
+  "bugs": {
+    "url": "https://github.com/RitualDev-Lab/ritual-agent-defense/issues"
+  },
+  "license": "MIT",
+  "categories": [
+    "AI",
+    "Security",
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "ai",
+    "agent",
+    "cursor",
+    "mcp",
+    "agentshield",
+    "dbshield",
+    "skillprism",
+    "devshelf",
+    "guardrails",
+    "sandbox",
+    "windsurf"
+  ],
+  "icon": "media/icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "ritual-mesh",
+          "title": "Ritual Agent Defense",
+          "icon": "media/shield.svg"
+        }
+      ]
+    },
+    "views": {
+      "ritual-mesh": [
+        {
+          "type": "webview",
+          "id": "ritual.approvalsView",
+          "name": "1-Click Approvals & Shield Gate",
+          "icon": "$(shield)"
+        },
+        {
+          "type": "webview",
+          "id": "ritual.tokenVisualizerView",
+          "name": "SkillPrism Token Savings",
+          "icon": "$(zap)"
+        },
+        {
+          "type": "webview",
+          "id": "ritual.devshelfView",
+          "name": "DevShelf MCP Tool Catalog",
+          "icon": "$(package)"
+        },
+        {
+          "id": "ritual.meshStatusView",
+          "name": "Agent Mesh & Sandbox Health",
+          "icon": "$(pulse)"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "ritual.refreshAll",
+        "title": "Ritual: Refresh Mesh Status",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "ritual.openDashboard",
+        "title": "Ritual: Open Live Approval Feed Dashboard",
+        "icon": "$(link-external)"
+      },
+      {
+        "command": "ritual.approveMutation",
+        "title": "Ritual: 1-Click Approve Mutation"
+      },
+      {
+        "command": "ritual.rejectMutation",
+        "title": "Ritual: Reject Mutation"
+      },
+      {
+        "command": "ritual.browseDevShelf",
+        "title": "Ritual: Browse DevShelf MCP Directory"
+      },
+      {
+        "command": "ritual.configureMcp",
+        "title": "Ritual: Add Tool to Cursor / Claude mcp.json"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "ritual.refreshAll",
+          "when": "view == ritual.approvalsView || view == ritual.meshStatusView || view == ritual.tokenVisualizerView",
+          "group": "navigation"
+        },
+        {
+          "command": "ritual.openDashboard",
+          "when": "view == ritual.approvalsView",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Ritual Agent Defense",
+      "properties": {
+        "ritual.dbshieldUrl": {
+          "type": "string",
+          "default": "http://localhost:3100",
+          "description": "DBShield live approval and defense dashboard URL."
+        },
+        "ritual.sandboxEngine": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "Seatbelt (macOS)",
+            "bwrap (Linux)",
+            "AppContainer (Windows)"
+          ],
+          "default": "auto",
+          "description": "Active kernel sandbox profile to enforce for agent subprocesses."
+        },
+        "ritual.skillprismEndpoint": {
+          "type": "string",
+          "default": "http://localhost:6379",
+          "description": "SkillPrism tool optimizer and federated cache endpoint."
+        },
+        "ritual.autoRefreshIntervalMs": {
+          "type": "number",
+          "default": 3000,
+          "description": "Interval in milliseconds to poll pending approvals and mesh status."
+        },
+        "ritual.notifications": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show system pop-up notifications when agents request mutation approvals."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "build": "tsc -p ./",
+    "package": "vsce package --no-dependencies",
+    "publish:vscode": "vsce publish",
+    "publish:openvsx": "ovsx publish",
+    "test": "tsx --test \"tests/**/*.test.ts\""
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^2.24.0",
+    "ovsx": "^0.8.3",
+    "tsx": "^4.23.15",
+    "typescript": "^5.3.3"
+  }
+}
