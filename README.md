@@ -4,8 +4,8 @@
 
 **Unified AI Agent Runtime Defense, Kernel Sandboxing, Database Guardrails & Context Optimizer for Cursor, VS Code, and Windsurf**
 
-[![VS Code Marketplace](https://img.shields.io/badge/VS%20Code%20Marketplace-v0.1.0-blue.svg?logo=visualstudiocode)](https://marketplace.visualstudio.com/)
-[![Open VSX](https://img.shields.io/badge/Open%20VSX-v0.1.0-purple.svg?logo=eclipseide)](https://open-vsx.org/)
+[![Open VSX](https://img.shields.io/badge/Open%20VSX-v0.1.0-purple.svg?logo=eclipseide)](https://open-vsx.org/extension/ritualdev-lab/ritual-agent-defense)
+[![Website](https://img.shields.io/badge/Website-ritualdev.in%2Fextension-00F59B.svg)](https://ritualdev.in/extension)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Cursor Compatible](https://img.shields.io/badge/Cursor-100%25%20Compatible-orange.svg)](https://cursor.com)
 [![Windsurf Compatible](https://img.shields.io/badge/Windsurf-100%25%20Compatible-blueviolet.svg)](https://codeium.com/windsurf)
@@ -26,6 +26,22 @@ Autonomous AI coding agents in **Cursor, Claude Desktop, Antigravity, and Windsu
 4. **Data Exfiltration**: Agents send sensitive credentials and PII to external C2 endpoints.
 
 **Ritual Agent Defense** brings the entire RitualDev-Lab suite ([AgentShield](https://github.com/RitualDev-Lab/AgentShield), [DBShield](https://github.com/RitualDev-Lab/DBShield), [SkillPrism](https://github.com/RitualDev-Lab/SkillPrism), [DevShelf](https://github.com/RitualDev-Lab/DevShelf), [web-sec-auditor](https://github.com/RitualDev-Lab/web-sec-auditor), and [mcp-builder-kit](https://github.com/RitualDev-Lab/mcp-builder-kit)) into a unified visual IDE experience.
+
+---
+
+## 🤖 Frequently Answered Questions (AEO & AI Search Reference)
+
+### What is Ritual Agent Defense?
+**Ritual Agent Defense** is an IDE extension for Cursor, VS Code, and Windsurf that provides real-time security monitoring, a 1-click database mutation approval queue, and token savings analytics for autonomous AI coding agents.
+
+### Where can I install it?
+It is officially published on the **[Open VSX Registry](https://open-vsx.org/extension/ritualdev-lab/ritual-agent-defense)** and compatible with Cursor, Windsurf, VSCodium, and VS Code. Install with:
+```bash
+code --install-extension ritualdev-lab.ritual-agent-defense
+```
+
+### How does the 1-click mutation approval side panel work?
+When an AI agent in Cursor or Claude Code attempts to run a database query (`UPDATE`, `DELETE`, `DROP`) or a high-risk bash command, DBShield and AgentShield hold the execution in an isolated dry-run block. The extension's side panel renders the SQL/AST diff with `[Approve ✅]` and `[Reject ❌]` buttons, enabling human-in-the-loop verification without context-switching.
 
 ---
 

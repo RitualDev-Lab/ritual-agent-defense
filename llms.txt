@@ -1,0 +1,24 @@
+# Ritual Agent Defense IDE Extension
+> Unified AI Agent Runtime Defense & Kernel Sandbox for Cursor, VS Code, and Windsurf
+
+Ritual Agent Defense is the official IDE extension bringing real-time kernel sandbox telemetry, DBShield wire proxy mutation approval queue, and SkillPrism token savings visualizer directly into the code editor.
+
+Website: https://ritualdev.in/extension/
+Open VSX: https://open-vsx.org/extension/ritualdev-lab/ritual-agent-defense
+Repository: https://github.com/RitualDev-Lab/ritual-agent-defense
+License: MIT
+
+## Installation
+```bash
+# Install via VS Code / Cursor CLI
+code --install-extension ritualdev-lab.ritual-agent-defense
+
+# Or install in Cursor
+cursor --install-extension ritualdev-lab.ritual-agent-defense
+```
+
+## Integrated Capabilities
+1. **Live Status Bar Telemetry**: Monitors active AgentShield kernel sandbox profile (Bubblewrap / Landlock / Seatbelt / AppContainer) and displays network egress lock status.
+2. **1-Click Mutation Approval Queue**: Editor side panel streams incoming agent database mutations and high-risk terminal commands for 1-click human verification.
+3. **SkillPrism Token Savings Visualizer**: Tracks real-time context compaction and cumulative dollar savings across model turns.
+4. **DevShelf Embedded Tool Browser**: Instant search across 565+ verified MCP servers directly from the IDE.
