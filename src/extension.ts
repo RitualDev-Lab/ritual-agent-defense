@@ -147,6 +147,50 @@ export function activate(context: vscode.ExtensionContext): void {
       }
       await configureMcpServer(tool);
     }),
+
+    vscode.commands.registerCommand("ritual.dbshield.startProxy", () => {
+      const term = vscode.window.createTerminal("DBShield Wire Proxy");
+      term.show();
+      term.sendText("npx @ritualdev-lab/dbshield proxy --port 5433");
+      vscode.window.showInformationMessage("🚀 [DBShield] PostgreSQL Wire Proxy started on port 5433.");
+    }),
+
+    vscode.commands.registerCommand("ritual.dbshield.topMonitor", () => {
+      const term = vscode.window.createTerminal("DBShield Top Monitor");
+      term.show();
+      term.sendText("npx @ritualdev-lab/dbshield top");
+    }),
+
+    vscode.commands.registerCommand("ritual.dbshield.auditWorkspace", () => {
+      const term = vscode.window.createTerminal("DBShield Audit");
+      term.show();
+      term.sendText("npx @ritualdev-lab/dbshield audit .");
+    }),
+
+    vscode.commands.registerCommand("ritual.dbshield.openSimulator", () => {
+      vscode.env.openExternal(vscode.Uri.parse("https://ritualdev.in/dbshield/#simulator"));
+    }),
+
+    vscode.commands.registerCommand("ritual.dbshield.configureMcp", async () => {
+      const pick = await vscode.window.showQuickPick(
+        [
+          "Cursor IDE (.cursor/mcp.json in Workspace)",
+          "Google Antigravity (.antigravity/mcp.json in Workspace)",
+          "Claude Desktop (claude_desktop_config.json)",
+        ],
+        { placeHolder: "Select target IDE to configure DBShield MCP server:" },
+      );
+      if (!pick) return;
+      const term = vscode.window.createTerminal("DBShield Configurator");
+      term.show();
+      if (pick.includes("Cursor")) {
+        term.sendText("npx @ritualdev-lab/dbshield install-cursor");
+      } else if (pick.includes("Antigravity")) {
+        term.sendText("npx @ritualdev-lab/dbshield install-antigravity");
+      } else {
+        term.sendText("npx @ritualdev-lab/dbshield install-claude");
+      }
+    }),
   );
 
   // Initial update

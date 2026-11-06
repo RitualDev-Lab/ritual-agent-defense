@@ -2,7 +2,7 @@
   "name": "ritual-agent-defense",
   "displayName": "Ritual Agent Defense",
   "description": "Unified AI Agent Runtime Defense, Kernel Sandboxing, Database Guardrails & Context Optimizer for Cursor, VS Code, and Windsurf",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "ritualdev-lab",
   "repository": {
     "type": "git",
@@ -103,6 +103,31 @@
       {
         "command": "ritual.configureMcp",
         "title": "Ritual: Add Tool to Cursor / Claude mcp.json"
+      },
+      {
+        "command": "ritual.dbshield.startProxy",
+        "title": "DBShield: Launch PostgreSQL Wire Proxy (:5433)",
+        "icon": "$(server-process)"
+      },
+      {
+        "command": "ritual.dbshield.topMonitor",
+        "title": "DBShield: Launch Interactive Terminal Monitor (top)",
+        "icon": "$(dashboard)"
+      },
+      {
+        "command": "ritual.dbshield.auditWorkspace",
+        "title": "DBShield: Audit Workspace Migrations & Lock Hazards",
+        "icon": "$(shield)"
+      },
+      {
+        "command": "ritual.dbshield.openSimulator",
+        "title": "DBShield: Open Interactive SQL Guardrail Simulator",
+        "icon": "$(play)"
+      },
+      {
+        "command": "ritual.dbshield.configureMcp",
+        "title": "DBShield: 1-Click Configure Cursor / Antigravity MCP",
+        "icon": "$(tools)"
       }
     ],
     "menus": {
