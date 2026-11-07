@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 # 🛡️ Ritual Agent Defense
 
@@ -9,6 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Cursor Compatible](https://img.shields.io/badge/Cursor-100%25%20Compatible-orange.svg)](https://cursor.com)
 [![Windsurf Compatible](https://img.shields.io/badge/Windsurf-100%25%20Compatible-blueviolet.svg)](https://codeium.com/windsurf)
+[![Sponsor on Dodo Payments](https://img.shields.io/badge/Sponsor-Dodo%20Payments-8b5cf6?style=flat-square&logo=shield&logoColor=white)](https://checkout.dodopayments.com/buy/pdt_0NpjONGugY5QkrFDUaPva)
 [![MCP Protocol](https://img.shields.io/badge/MCP-Protocol%20Native-brightgreen.svg)](https://modelcontextprotocol.io/)
 
 *The essential safety and governance companion for autonomous AI coding agents. Intercept destructive database mutations, sandbox shell commands, trim context token bloat, and browse verified MCP tools directly in your editor.*
@@ -144,6 +145,26 @@ code --install-extension ritual-agent-defense-0.1.0.vsix
    ```
 
 ---
+
+---
+
+## 💖 Sponsor & Support via Dodo Payments
+
+Ritual Agent Defense is 100% open-source and MIT-licensed. Your sponsorship directly finances our VS Code, Cursor, and Windsurf runtime defense rigs, kernel sandboxing drivers, and Open VSX marketplace distribution pipelines.
+
+<div align="center">
+
+[![Sponsor on Dodo Payments](https://img.shields.io/badge/Sponsor_via_Dodo-Payments-8b5cf6?style=for-the-badge&logo=shield&logoColor=white)](https://checkout.dodopayments.com/buy/pdt_0NpjONGugY5QkrFDUaPva)
+[![Interactive Donation Portal](https://img.shields.io/badge/Donation_Portal-Cards%20%7C%20UPI%20%7C%20Apple%20Pay-ff5964?style=for-the-badge&logo=heart&logoColor=white)](https://ritualdev.in/donate)
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-RitualDev--Lab-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/RitualDev-Lab)
+
+<br/>
+
+[**⚡ 1-Click Dodo Payments Checkout**](https://checkout.dodopayments.com/buy/pdt_0NpjONGugY5QkrFDUaPva) &nbsp;•&nbsp; [**🎁 Interactive Donation Form (USD & INR UPI)**](https://ritualdev.in/donate) &nbsp;•&nbsp; [**❤️ GitHub Sponsors**](https://github.com/sponsors/RitualDev-Lab)
+
+<sub>🔒 *Zero physical shipping required. Powered by Dodo Payments (Merchant of Record) with instant tax invoice and global payment methods (Cards, UPI, Apple Pay).*</sub>
+
+</div>
 
 ## 📄 License
 MIT © [RitualDev Lab](https://github.com/RitualDev-Lab)
