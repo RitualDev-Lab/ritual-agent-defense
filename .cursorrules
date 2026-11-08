@@ -1,0 +1,4 @@
+# Cursor AI Rules for Ritual Agent Defense
+- Preserve VS Code extension activation lifecycle performance (< 50ms startup).
+- Never block UI thread during security approval queue streaming.
+- Use strictly typed TypeScript and maintain webview message protocol contracts.
