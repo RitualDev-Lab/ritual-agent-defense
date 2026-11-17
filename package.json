@@ -2,7 +2,7 @@
   "name": "ritual-agent-defense",
   "displayName": "Ritual Agent Defense",
   "description": "Unified AI Agent Runtime Defense, Kernel Sandboxing, Database Guardrails & Context Optimizer for Cursor, VS Code, and Windsurf",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "publisher": "ritualdev-lab",
   "repository": {
     "type": "git",
@@ -74,6 +74,16 @@
           "id": "ritual.meshStatusView",
           "name": "Agent Mesh & Sandbox Health",
           "icon": "$(pulse)"
+        },
+        {
+          "id": "ritual.polyWorkspaceView",
+          "name": "Poly Monorepo & Task Graph",
+          "icon": "$(project)"
+        },
+        {
+          "id": "ritual.polyHealthView",
+          "name": "Poly Ecosystem Health",
+          "icon": "$(heart)"
         }
       ]
     },
@@ -128,13 +138,112 @@
         "command": "ritual.dbshield.configureMcp",
         "title": "DBShield: 1-Click Configure Cursor / Antigravity MCP",
         "icon": "$(tools)"
+      },
+      {
+        "command": "ritual.agentshield.scanActiveFile",
+        "title": "AgentShield: Scan Active File for Secrets & DLP Leaks",
+        "icon": "$(shield)"
+      },
+      {
+        "command": "ritual.agentshield.auditWorkspace",
+        "title": "AgentShield: Audit Entire Workspace with Security Enforcer",
+        "icon": "$(search)"
+      },
+      {
+        "command": "ritual.agentshield.switchSandboxProfile",
+        "title": "AgentShield: Switch OS Kernel Sandbox Profile",
+        "icon": "$(lock)"
+      },
+      {
+        "command": "ritual.agentshield.showStatusMenu",
+        "title": "AgentShield: Show Zero-Leak Defense Status & Actions"
+      },
+      {
+        "command": "ritual.poly.refresh",
+        "title": "Poly: Refresh Workspace & Ecosystem Health",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "ritual.poly.install",
+        "title": "Poly: Install & Synchronize Polyglot Dependencies",
+        "icon": "$(cloud-download)"
+      },
+      {
+        "command": "ritual.poly.audit",
+        "title": "Poly: Audit Monorepo Security Vulnerabilities",
+        "icon": "$(shield)"
+      },
+      {
+        "command": "ritual.poly.fix",
+        "title": "Poly: Auto-Heal Vulnerabilities & Regenerate Lockfile",
+        "icon": "$(wrench)"
+      },
+      {
+        "command": "ritual.poly.doctor",
+        "title": "Poly: Run Multi-Ecosystem System Diagnostics",
+        "icon": "$(pulse)"
+      },
+      {
+        "command": "ritual.poly.graph",
+        "title": "Poly: Visualize Monorepo Task Dependency Graph",
+        "icon": "$(type-hierarchy)"
+      },
+      {
+        "command": "ritual.poly.docker",
+        "title": "Poly: Generate Multi-Stage Container & DevContainer",
+        "icon": "$(package)"
+      },
+      {
+        "command": "ritual.poly.addDependency",
+        "title": "Poly: Add Polyglot Dependency via PURL"
+      },
+      {
+        "command": "ritual.poly.verifyLockfile",
+        "title": "Poly: Verify poly.lock Cryptographic Integrity"
+      },
+      {
+        "command": "ritual.poly.cacheStatus",
+        "title": "Poly: Inspect Live Remote Cache Cluster Status"
+      },
+      {
+        "command": "ritual.poly.cachePurge",
+        "title": "Poly: Purge Remote Cache for Current Monorepo Branch"
+      },
+      {
+        "command": "ritual.gitwhisper.generateCommit",
+        "title": "GitWhisper: Generate AI Conventional Commit Message",
+        "icon": "$(sparkle)"
+      },
+      {
+        "command": "ritual.gitwhisper.checkQuality",
+        "title": "GitWhisper: Check Staged Commit Quality & Formatting",
+        "icon": "$(check)"
       }
     ],
     "menus": {
+      "scm/title": [
+        {
+          "command": "ritual.gitwhisper.generateCommit",
+          "group": "navigation@1",
+          "when": "scmRepositoryCount > 0"
+        }
+      ],
+      "scm/inputBox": [
+        {
+          "command": "ritual.gitwhisper.generateCommit",
+          "group": "inline",
+          "when": "scmRepositoryCount > 0"
+        }
+      ],
       "view/title": [
         {
           "command": "ritual.refreshAll",
           "when": "view == ritual.approvalsView || view == ritual.meshStatusView || view == ritual.tokenVisualizerView",
+          "group": "navigation"
+        },
+        {
+          "command": "ritual.poly.refresh",
+          "when": "view == ritual.polyWorkspaceView || view == ritual.polyHealthView",
           "group": "navigation"
         },
         {
@@ -177,6 +286,26 @@
           "type": "boolean",
           "default": true,
           "description": "Show system pop-up notifications when agents request mutation approvals."
+        },
+        "poly.executablePath": {
+          "type": "string",
+          "default": "poly",
+          "description": "Path to poly CLI binary or global executable."
+        },
+        "poly.remoteCacheUrl": {
+          "type": "string",
+          "default": "https://api.poly.build",
+          "description": "Hosted or enterprise self-hosted Poly remote cache cluster URL."
+        },
+        "gitwhisper.model": {
+          "type": "string",
+          "default": "local-deterministic",
+          "description": "Model engine used for conventional commit message synthesis."
+        },
+        "gitwhisper.redactSecrets": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically redact API keys, tokens, and PII from generated commit messages."
         }
       }
     }
