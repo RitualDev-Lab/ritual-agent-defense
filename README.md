@@ -86,12 +86,21 @@ Status Bar: $(shield) AgentShield: Seatbelt | $(database) DBShield: Balanced (1 
 *   **Interactive Playground**: Test any tool or endpoint inside an isolated sandbox runner directly in the side panel before installing.
 *   **1-Click Installer**: Click **"⚡ Add to Cursor / Claude"** to automatically configure `.cursor/mcp.json` or `claude_desktop_config.json`.
 
-### 5. 🩺 Agent Mesh & Sandbox Health Tree
-*   Live diagnostic tree monitoring all 4 security and governance tiers:
-    *   **AgentShield**: Active micro-jails, syscall filters, egress CIDR boundaries.
-    *   **DBShield**: PostgreSQL/MySQL wire proxies, virtual schema masking, PII redactor.
-    *   **SkillPrism**: Federated Redis cache status, semantic search index health.
-    *   **WebSecAuditor**: Inter-file AST taint tracker, live AI secret scanner.
+### 6. 🛡️ AgentShield Zero-Leak DLP Linter & 1-Click Redactor
+*   **Real-time ReDoS-Safe Secret Scanning**: Scans active documents on open and change for unmasked OpenAI keys, AWS access keys, GitHub PATs, Anthropic tokens, and `/proc/self/environ` reads.
+*   **1-Click Quick-Fix**: Click the lightbulb on any detected credential leak to instantly execute **"🛡️ Redact Secret with AgentShield"**, replacing the sensitive value with `[AGENTSHIELD_REDACTED:<ID>:<SALT>]`.
+*   **Kernel Sandbox Profile Switcher**: Toggle between `Strict` (zero-network air-gapped jail), `Standard` (Git-only egress), and `Permissive` (localhost IPC).
+
+### 7. ⚡ Poly Monorepo & Task Graph Runner
+*   **Polyglot Workspace Discovery**: Tree view scanning npm, PyPI/uv, Cargo, and Go workspace members and dependencies.
+*   **1-Click Poly Runner**: Execute `poly install`, `poly audit`, `poly fix`, `poly doctor`, `poly graph`, and `poly docker` directly from the editor.
+*   **Cryptographic Lockfile Verification**: Validates `poly.lock` integrity and reports drift.
+*   **Remote Cache Telemetry**: Live status check and branch-level remote cache invalidation.
+
+### 8. 💬 GitWhisper AI Conventional Commit Intelligence
+*   **SCM Integration**: Click the Sparkle icon in the Source Control title or input box to generate conventional commit messages (`feat`, `fix`, `refactor`, `perf`).
+*   **Zero-Egress Privacy**: Automatic secret redaction and `[Local-Only]` privacy badge assurance before committing.
+*   **Quality & Formatting Linter**: Evaluates staged commit messages against the Conventional Commits specification with a 0–100 score.
 
 ---
 
