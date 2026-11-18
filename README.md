@@ -18,6 +18,11 @@
 
 ---
 
+> **Canonical VS Code Extension Alignment**: For the canonical lightweight 3-layer IDE extension covering **AgentShield Sandbox**, **DBShield Mutation Approvals**, and **SkillPrism MCP Context Compactor**, see [`RitualDev-Lab/agentshield-vscode`](https://github.com/RitualDev-Lab/agentshield-vscode).  
+> This repository (`ritual-agent-defense`) hosts the extended multi-mesh workbench edition (including the embedded DevShelf browser and Poly monorepo runner). Both extensions share the unified [`ritual.policy.yaml`](https://github.com/RitualDev-Lab/AgentShield/blob/main/examples/ritual.policy.yaml) defense architecture.
+
+---
+
 ## ⚡ Why Ritual Agent Defense?
 
 Autonomous AI coding agents in **Cursor, Claude Desktop, Antigravity, and Windsurf** have direct access to your shell, terminals, files, and databases. Without guardrails:
@@ -96,11 +101,6 @@ Status Bar: $(shield) AgentShield: Seatbelt | $(database) DBShield: Balanced (1 
 *   **1-Click Poly Runner**: Execute `poly install`, `poly audit`, `poly fix`, `poly doctor`, `poly graph`, and `poly docker` directly from the editor.
 *   **Cryptographic Lockfile Verification**: Validates `poly.lock` integrity and reports drift.
 *   **Remote Cache Telemetry**: Live status check and branch-level remote cache invalidation.
-
-### 8. 💬 GitWhisper AI Conventional Commit Intelligence
-*   **SCM Integration**: Click the Sparkle icon in the Source Control title or input box to generate conventional commit messages (`feat`, `fix`, `refactor`, `perf`).
-*   **Zero-Egress Privacy**: Automatic secret redaction and `[Local-Only]` privacy badge assurance before committing.
-*   **Quality & Formatting Linter**: Evaluates staged commit messages against the Conventional Commits specification with a 0–100 score.
 
 ---
 
