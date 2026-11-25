@@ -91,12 +91,12 @@ Status Bar: $(shield) AgentShield: Seatbelt | $(database) DBShield: Balanced (1 
 *   **Interactive Playground**: Test any tool or endpoint inside an isolated sandbox runner directly in the side panel before installing.
 *   **1-Click Installer**: Click **"⚡ Add to Cursor / Claude"** to automatically configure `.cursor/mcp.json` or `claude_desktop_config.json`.
 
-### 6. 🛡️ AgentShield Zero-Leak DLP Linter & 1-Click Redactor
+### 5. 🛡️ AgentShield Zero-Leak DLP Linter & 1-Click Redactor
 *   **Real-time ReDoS-Safe Secret Scanning**: Scans active documents on open and change for unmasked OpenAI keys, AWS access keys, GitHub PATs, Anthropic tokens, and `/proc/self/environ` reads.
 *   **1-Click Quick-Fix**: Click the lightbulb on any detected credential leak to instantly execute **"🛡️ Redact Secret with AgentShield"**, replacing the sensitive value with `[AGENTSHIELD_REDACTED:<ID>:<SALT>]`.
 *   **Kernel Sandbox Profile Switcher**: Toggle between `Strict` (zero-network air-gapped jail), `Standard` (Git-only egress), and `Permissive` (localhost IPC).
 
-### 7. ⚡ Poly Monorepo & Task Graph Runner
+### 6. ⚡ Poly Monorepo & Task Graph Runner
 *   **Polyglot Workspace Discovery**: Tree view scanning npm, PyPI/uv, Cargo, and Go workspace members and dependencies.
 *   **1-Click Poly Runner**: Execute `poly install`, `poly audit`, `poly fix`, `poly doctor`, `poly graph`, and `poly docker` directly from the editor.
 *   **Cryptographic Lockfile Verification**: Validates `poly.lock` integrity and reports drift.
@@ -152,8 +152,6 @@ code --install-extension ritual-agent-defense-0.1.0.vsix
    ```bash
    npx ovsx publish -p <OPENVSX_ACCESS_TOKEN>
    ```
-
----
 
 ---
 
